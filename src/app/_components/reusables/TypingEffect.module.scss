@@ -1,0 +1,20 @@
+@import "../../globalStyles.scss";
+
+.container {
+  box-shadow: $card-shadow;
+  border-radius: $card-radius;
+  background-color: #0d142f;
+  padding: 32px;
+  min-height: 400px;
+  display: flex;
+
+  @media (max-width: 1279px) {
+    & {
+        flex-direction: column;
+    }
+  }
+}
+
+.success {
+  color: green;
+}

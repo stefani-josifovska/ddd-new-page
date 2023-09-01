@@ -1,0 +1,38 @@
+@import "../../globalStyles.scss";
+
+.container > div {
+  @extend .width;
+  display: flex;
+
+  & h2 {
+    flex: 1;
+    font-weight: 400;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logoContainer {
+  flex: 2;
+
+  & span {
+    font-size: 1.2rem;
+  }
+
+  & > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.orangeText {
+  color: $main-orange;
+}
+
+@media (max-width: 1279px) {
+  .container > div {
+    display: revert;
+  }
+}

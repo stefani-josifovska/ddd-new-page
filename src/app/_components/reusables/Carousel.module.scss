@@ -1,0 +1,69 @@
+@import "../../globalStyles.scss";
+
+.container {
+  box-shadow: $card-shadow;
+  border-radius: $card-radius;
+  height: calc(100% - 32px);
+  margin-left: 32px;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.imgCont {
+  height: 70%;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.countryCont {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstLayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  & h4 {
+    background-color: white;
+    font-size: 1.3rem;
+  }
+
+  & a:last-of-type {
+    color: $text-blue;
+  }
+}
+
+.secondLayer {
+  position: relative;
+  display: flex;
+  top: -3px;
+  // left: -90px;
+  // top: 10px;
+
+  & img {
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  & button:first-of-type {
+    transform: rotate(-15deg) translateY(13px) translateX(-10px);
+  }
+
+  & button:last-of-type {
+    transform: rotate(15deg) translateY(13px) translateX(10px);
+  }
+}
+
+@media (max-width: 1279px) {
+  .container {
+    margin-left: revert;
+    height: 300px;
+  }
+}

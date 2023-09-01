@@ -1,0 +1,30 @@
+@import "../../globalStyles.scss";
+
+.container {
+  @extend .width;
+  @extend .verticalMargin;
+
+  & h2 {
+    font-size: 2rem;
+  }
+
+  & h3 {
+    font-size: 1.2rem;
+  }
+
+  & section {
+    box-shadow: $card-shadow;
+    padding: 16px;
+    border-radius: $card-radius;
+    margin-block: 20px;
+
+    & h4 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    & p {
+      color: $text-blue;
+    }
+  }
+}

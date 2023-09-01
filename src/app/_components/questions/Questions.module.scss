@@ -1,0 +1,85 @@
+@import "../../globalStyles.scss";
+
+.container {
+  @extend .width;
+}
+
+.questDiv {
+  & > div {
+    border-bottom: 1px solid black;
+  }
+
+  & h3 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-right: 30px;
+    // color: $main-orange;
+  }
+
+  & h4 {
+    color: $main-orange;
+    font-weight: 600;
+    margin-right: 30px;
+  }
+
+  & p {
+    color: $main-blue;
+    margin-top: 10px;
+  }
+}
+
+.linkCont {
+  border-bottom: none !important;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+
+  & a {
+    color: $main-blue;
+  }
+}
+
+.answer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.dispAnswer {
+  opacity: 1;
+  max-height: 1000px; /* Adjust this value based on your content */
+}
+
+.arrow {
+  transform: rotate(180deg);
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    border-radius: $card-radius;
+    box-shadow: $card-shadow;
+    position: relative;
+  }
+}
+
+.stickyTitle {
+  position: sticky;
+  top: 50vh;
+  margin: auto;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    & > div:first-of-type {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@import "../../globalStyles.scss";
+
+.container {
+  @extend .width;
+  position: sticky;
+  top: 0;
+  background: transparent;
+  height: $navbar-height;
+  z-index: 40;
+
+  & > .desktopNav {
+    display: flex;
+    align-items: center;
+  }
+
+  & img {
+    margin-right: $navbar-gap;
+  }
+
+  & > div > div button:first-of-type {
+    margin-right: $navbar-gap;
+  }
+
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    gap: $navbar-gap;
+
+    & li {
+      color: white;
+
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  & > div {
+    padding-block: 12px;
+  }
+}
+
+.mobileNav {
+  display: none;
+}
+
+.navDropdownContainer {
+  position: relative;
+
+  & > div {
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+
+    & li {
+      color: black;
+    }
+
+    &:hover .toggleDisp,
+    & button:focus + .toggleDisp,
+    & a:focus + .toggleDisp {
+      display: block;
+    }
+  }
+}
+
+.toggleDisp {
+  display: none;
+}
+
+.navDropdownContainer:hover .toggleDisp,
+.navDropdownContainer button:focus + .toggleDisp,
+.navDropdownContainer a:focus + .toggleDisp {
+  display: block;
+}
+
+.navbar {
+  height: calc($navbar-height + 24px);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.navbar--scrolled {
+  background: $main-blue;
+}
+
+@media (max-width: 1279px) {
+  .container {
+    padding-block: 12px;
+  }
+
+  .desktopNav {
+    display: none !important;
+  }
+
+  .mobileNav {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: $navbar-height;
+
+    & > div {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      z-index: 100;
+      background: linear-gradient(28.25deg, #005683 20.94%, #238abe 65.96%);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: revert;
+    }
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
+}

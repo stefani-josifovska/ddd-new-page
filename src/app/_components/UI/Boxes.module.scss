@@ -1,0 +1,40 @@
+@import "../../globalStyles.scss";
+
+.container {
+  @extend .width;
+  @extend .verticalMargin;
+
+  & h2 {
+    font-size: 2rem;
+    width: 50%;
+  }
+
+  & h3 {
+    font-size: 1.2rem;
+  }
+}
+
+.boxContainer {
+  box-shadow: $card-shadow;
+  padding: 16px;
+  border-radius: $card-radius;
+  text-align: center;
+  margin-block: 20px;
+
+  & h4 {
+    font-size: 1.5rem;
+  }
+
+  & h5 {
+    color: $main-orange;
+  }
+
+  & p,
+  & a {
+    color: $text-blue;
+  }
+
+  & a {
+    margin-top: auto;
+  }
+}

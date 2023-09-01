@@ -1,0 +1,19 @@
+@import "../../globalStyles.scss";
+
+.imgContainer {
+  aspect-ratio: 1 / 1;
+  height: 20rem;
+  margin: auto;
+  background-repeat: no-repeat;
+  border-radius: $card-radius;
+  box-shadow: $card-shadow;
+  background-size: cover;
+}
+
+@media (max-width: 1279px) {
+  .imgContainer {
+    width: 100%;
+    height: revert;
+    margin-block: 2rem;
+  }
+}
