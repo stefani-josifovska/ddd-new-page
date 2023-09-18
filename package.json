@@ -1,5 +1,5 @@
 {
-  "name": "e-invoices-online-webpage",
+  "name": "dddinvoices-webpage",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next/font": "^13.4.19",
+    "@next/font": "^13.4.19",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
