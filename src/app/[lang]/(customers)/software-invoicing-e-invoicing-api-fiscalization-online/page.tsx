@@ -11,6 +11,8 @@ import ImgContainer from "@/app/_components/UI/ImgContainer";
 import CaseStudies from "@/app/_components/reusables/CaseStudies";
 import { Metadata } from "next";
 import ButtonLink from "@/app/_components/UI/ButtonLink";
+import worldImg from "../../../_assets/world.webp";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Global e-invoicing API for ERP, CRM & softwares",
@@ -42,7 +44,9 @@ const Vendors: React.FC<{}> = () => {
             assist you in achieving worry-free certified compliance.
           </p>
         </div>
-        <div>slika</div>
+        <div>
+          <Image src={worldImg} alt="" className="m-auto" />
+        </div>
       </Grid>
       <Benefits
         title="Skip all development costs & save with e-invoices"
@@ -83,14 +87,16 @@ const Vendors: React.FC<{}> = () => {
           </p>
           <p>
             Fully adapting to your existing software system, we guarantee the
-            uninterrupted exchange of all of your e-invoices, making sure that
-            your electronic documents are in good hands.
+            uninterrupted exchange of all of your{" "}
+            <span className="whitespace-nowrap">e-invoices</span>, making sure
+            that your electronic documents are in good hands.
           </p>
           <ButtonLink
             href="/enterprises-invoicing-e-invoicing-fiscalization"
             content="Look here for enterprise solutions >"
             variant="primary"
             color="orange"
+            className="px-10"
           />
         </div>
         <div>

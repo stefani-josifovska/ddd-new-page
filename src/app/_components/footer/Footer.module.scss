@@ -54,3 +54,15 @@
 .link:hover {
   opacity: 0.8;
 }
+
+.footerMenu {
+  & a:hover {
+    opacity: 0.65;
+  }
+
+  & li {
+    color: white;
+    opacity: 0.8;
+    font-weight: 300;
+  }
+}

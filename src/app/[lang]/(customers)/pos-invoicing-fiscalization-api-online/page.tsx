@@ -9,8 +9,9 @@ import img1 from "./img1.png";
 import img2 from "./img2.png";
 import ImgContainer from "@/app/_components/UI/ImgContainer";
 import { Metadata } from "next";
-import ButtonLink from "@/app/_components/UI/ButtonLink";
-import TypingEffect from "@/app/_components/reusables/TypingEffect";
+import Image from "next/image";
+import posImg from "../../../_assets/hiddenUiImg.webp";
+import CodeExample from "@/app/_components/reusables/CodeExample";
 
 export const metadata: Metadata = {
   title: "Invoicing & fiscalization for POS & ticketing systems",
@@ -79,28 +80,11 @@ const Ticketing: React.FC<{}> = () => {
             and attract more customers, all while boosting your bottom line.
           </p>
         </div>
-        <div>slika</div>
-      </Grid>
-      <Grid>
         <div>
-          <TypingEffect />
-        </div>
-        <div>
-          <h2>Test for free, before committing</h2>
-          <p>Test for free and switch to production when ready.</p>
-          <p>
-            Our integration is the same for all countries you require the
-            invoicing for.
-          </p>
-          <p>See how easy it is:</p>
-          <ButtonLink
-            href="https://dddinvoices.com/documentation"
-            content="Read the docs"
-            variant="primary"
-            color="orange"
-          />
+          <Image src={posImg} alt="" className="m-auto h-72 w-auto" />
         </div>
       </Grid>
+      <CodeExample />
       <CustomerCta />
     </>
   );

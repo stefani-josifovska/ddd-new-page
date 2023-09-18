@@ -6,8 +6,11 @@ import { hero, perks } from "./content";
 import MiddleCta from "@/app/_components/reusables/MiddleCta";
 import CustomerCta from "@/app/_components/reusables/CustomerCta";
 import { Metadata } from "next";
-import ButtonLink from "@/app/_components/UI/ButtonLink";
-import TypingEffect from "@/app/_components/reusables/TypingEffect";
+import CodeExample from "@/app/_components/reusables/CodeExample";
+import worldImg from "../../../_assets/world.webp";
+import Image from "next/image";
+import hiddenUi from "../../../_assets/hiddenUiImg.webp";
+import embeddedImg from "./embedUI.png";
 
 export const metadata: Metadata = {
   title: "Global invoicing & e-invoicing with 1 API for SaaS",
@@ -33,7 +36,9 @@ const Saas: React.FC<{}> = () => {
             value-added features to their clients in the blink of the eye.
           </p>
         </div>
-        <div>slika</div>
+        <div>
+          <Image src={worldImg} alt="" className="m-auto" />
+        </div>
       </Grid>
       <Benefits
         title="Enable B2C & B2B invoicing for your SaaS"
@@ -41,7 +46,9 @@ const Saas: React.FC<{}> = () => {
         perks={perks}
       />
       <Grid>
-        <div>slika</div>
+        <div>
+          <Image src={hiddenUi} alt="" className="m-auto h-72 w-auto" />
+        </div>
         <div>
           <h2>Completely hidden behind your UI</h2>
           <p>
@@ -54,7 +61,7 @@ const Saas: React.FC<{}> = () => {
       <MiddleCta />
       <Grid>
         <div>
-          <h2>Embedded finance?</h2>
+          <h2>Embedded finance</h2>
           <p>
             Add invoicing UI as part of your SaaS in the shape of an embedded
             invoicing front end.
@@ -64,28 +71,11 @@ const Saas: React.FC<{}> = () => {
             language and currency, we allow for a seamless, quick integration.
           </p>
         </div>
-        <div>slika</div>
-      </Grid>
-      <Grid>
         <div>
-          <TypingEffect />
-        </div>
-        <div>
-          <h2>Test for free, before committing</h2>
-          <p>Test for free and switch to production when ready.</p>
-          <p>
-            Our integration is the same for all countries you require the
-            invoicing for.
-          </p>
-          <p>See how easy it is:</p>
-          <ButtonLink
-            href="https://dddinvoices.com/documentation"
-            content="Read the docs"
-            variant="primary"
-            color="orange"
-          />
+          <Image src={embeddedImg} alt="" className="m-auto h-72 w-auto" />
         </div>
       </Grid>
+      <CodeExample />
       <CustomerCta />
     </>
   );

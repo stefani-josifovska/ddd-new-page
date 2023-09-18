@@ -24,6 +24,7 @@ const Hero: React.FC<{ content: heroContentObj }> = ({ content }) => {
                       key={`hero-btn-${index}`}
                       variant="secondary"
                       color="white"
+                      className={btn.className}
                     />
                   );
                 }
@@ -37,13 +38,13 @@ const Hero: React.FC<{ content: heroContentObj }> = ({ content }) => {
                     textColor={
                       btn.variant === "secondary" ? "white" : undefined
                     }
-                    className="mr-4"
+                    className={`mr-4 ${btn.className}`}
                   />
                 );
               })}
             </div>
           </div>
-          <div>Slika</div>
+          <div></div>
         </div>
       </div>
     </section>

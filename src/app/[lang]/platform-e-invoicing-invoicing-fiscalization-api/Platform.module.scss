@@ -1,9 +1,13 @@
 @import "../../globalStyles.scss";
 
-.heroBtns {
-  & button:first-of-type {
-    margin-right: 16px;
-  }
+// .heroBtns {
+//   & button:first-of-type {
+//     margin-right: 16px;
+//   }
+// }
+
+.heroBtns a:first-of-type {
+  margin-right: 16px;
 }
 
 .container {
@@ -33,6 +37,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2.5%;
+  row-gap: 20px;
 
   & > div {
     // width: 20%;
@@ -51,6 +56,18 @@
 
     & > div {
       max-width: 100%;
+      margin-block: 20px;
     }
+  }
+}
+
+@media (max-width: 497px) {
+  .heroBtns a {
+    width: 100%;
+  }
+
+  .heroBtns a:first-of-type {
+    margin-bottom: 16px;
+    margin-right: 0;
   }
 }

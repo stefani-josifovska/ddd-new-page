@@ -24,7 +24,7 @@ export default function Page({
       <TrustedBy />
       <Grid>
         <div>
-          <h3>Compliance problems</h3>
+          <span>Compliance problems</span>
           <h2>
             Invoicing for{" "}
             <b>
@@ -44,10 +44,13 @@ export default function Page({
             complex.
           </p>
         </div>
-        <div className="h-100">
+        <div className="h-100" style={{ margin: "revert" }}>
           <Carousel />
           <div className="mt-2 text-right">
-            <Link href="https://dddinvoices.com/learn/">
+            <Link
+              href="https://dddinvoices.com/learn/"
+              className={classes.carouselLink}
+            >
               More countries &gt;
             </Link>
           </div>
@@ -55,7 +58,7 @@ export default function Page({
       </Grid>
       <Grid>
         <div>
-          <h3>Solution</h3>
+          <span>Solution</span>
           <h2>
             One platform, <b>instant compliance,</b> multiple countries
           </h2>
@@ -68,12 +71,17 @@ export default function Page({
           <ButtonLink
             href="/platform-e-invoicing-invoicing-fiscalization-api"
             content="More about our platform >"
-            variant="primary"
+            variant="secondary"
             color="orange"
+            className="px-20"
           />
         </div>
         <div className="flex justify-center xl:justify-end mt-10 xl:mt-0">
-          <Image src={NetworkImg} alt="DDD Invoices network" />
+          <Image
+            src={NetworkImg}
+            alt="DDD Invoices network"
+            className="mt-10 lg:mt-0"
+          />
         </div>
       </Grid>
       <QuestionsContainer page="homepage" />
@@ -81,7 +89,7 @@ export default function Page({
       <section className={classes.container}>
         <Grid>
           <div>
-            <h3>Invoicing reimagined</h3>
+            <span>Still building invoicing compliance yourself?</span>
             <h2>
               API-first solution to overcome <b>global invoicing challenges</b>
             </h2>
@@ -108,6 +116,7 @@ export default function Page({
               content="Start for free"
               variant="primary"
               color="orange"
+              className="px-20"
             />
           </div>
           <div>slika</div>

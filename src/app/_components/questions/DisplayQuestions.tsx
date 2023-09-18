@@ -17,23 +17,25 @@ const DisplayQuestions: React.FC<{
         <div
           key={`question-${index}`}
           onClick={() => onChooseQuestion(index)}
-          className="py-2"
+          className="pb-2 pt-4"
         >
           <div className="relative hover:cursor-pointer hover:opacity-80">
             <h3>{question.title}</h3>
-            <h4>{question.subtitle}</h4>
-            <Image
-              src={arrowImg}
-              alt=""
-              className={`absolute right-0 bottom-4 ${
-                index === chosenIndex ? classes.arrow : ""
-              }`}
-            />
+            <p className={classes.questSubtitle}>{question.subtitle}</p>
+            {question.answer && (
+              <Image
+                src={arrowImg}
+                alt=""
+                className={`absolute right-0 bottom-4 ${
+                  index === chosenIndex ? classes.arrow : ""
+                }`}
+              />
+            )}
           </div>
           {question.answer && (
             <p
               className={`${classes.answer} ${
-                index === chosenIndex ? classes.dispAnswer : ""
+                index === chosenIndex ? classes.dispAnswer : classes.hideAnswer
               }`}
             >
               {question.answer}

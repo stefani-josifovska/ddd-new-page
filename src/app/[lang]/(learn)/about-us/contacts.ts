@@ -3,7 +3,7 @@ import denis from './denis.png';
 import dusan from './dusan.jpg';
 import aleksander from './aleksander.jpg';
 import tomaz from './tomaz.jpg';
-import nusa from './nusa.jpg';
+// import nusa from './nusa.jpg';
 
 type contactObject = {
   name: string;
@@ -32,9 +32,9 @@ export const contacts: contactObject[] = [
     position: 'Marketing',
     img: tomaz,
   },
-  {
-    name: 'Nuša Drofenik',
-    position: 'Tax & Legal',
-    img: nusa,
-  },
+  // {
+  //   name: 'Nuša Drofenik',
+  //   position: 'Tax & Legal',
+  //   img: nusa,
+  // },
 ];

@@ -11,9 +11,10 @@ const CustomerCta: React.FC<{}> = () => {
       </h2>
       <ButtonLink
         href="https://dddinvoices.com/sign-up"
-        content="Start free intergration"
+        content="Start free integration"
         variant="primary"
         color="orange"
+        className="px-10"
       />
     </section>
   );

@@ -8,8 +8,9 @@
   border-radius: $card-radius;
   text-align: center;
 
-  & h3 {
+  & > p {
     font-size: 1rem;
+    font-weight: 500;
   }
 
   & h2 {

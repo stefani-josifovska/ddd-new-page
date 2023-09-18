@@ -1,12 +1,10 @@
 import React from "react";
 import classes from "./LandingHero.module.scss";
-// import { content } from "./translations";
 import Image from "next/image";
 import worldImg from "../../_assets/hero_globe.svg";
 import ButtonLink from "../UI/ButtonLink";
 
 const LandingHero: React.FC<{}> = () => {
-  //   const onStartFree = () => {};
 
   return (
     <section className={classes.container}>
@@ -17,15 +15,16 @@ const LandingHero: React.FC<{}> = () => {
           Platform
         </h1>
         <p>
-          Enable global e-invoicing & real-time reporting for your software and
-          comply with local tax requirements with a single API integration in
-          just a couple of hours.
+          A single invoicing API integration to enable global invoicing,
+          e-invoicing & real-time reporting for your software and comply with
+          local tax requirements in just a couple of hours.
         </p>
         <ButtonLink
           href="https://dddinvoices.com/sign-up"
           content="Start for free"
           variant="primary"
           color="orange"
+          className="px-20"
         />
       </div>
       <div className={classes.imgContainer}>

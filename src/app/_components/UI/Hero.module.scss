@@ -41,7 +41,12 @@
 }
 
 @media (max-width: 1279px) {
-  .heroWrapper > div {
-    display: revert;
+  .heroWrapper {
+    background-position-x: 50%;
+    background-position-y: 25rem;
+
+    & > div {
+      display: revert;
+    }
   }
 }

@@ -11,9 +11,9 @@ const Terms: React.FC<{}> = () => {
   return (
     <section className={classes.container}>
       <div className={classes.header}></div>
-      <h1>Terms & conditions</h1>
+      <h1 className="mb-8">Terms & conditions</h1>
       <h3>Privacy policy</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         You have come to dddinvoices.com. Your access to and use of the portal
         is subject to the General Terms of Use and certain laws. The general
         terms and conditions are described below and should be read carefully.
@@ -23,14 +23,14 @@ const Terms: React.FC<{}> = () => {
         portal. The terms of use apply to the entire dddinvoices.com portal.
       </p>
       <h3>Changes to the Terms of Use</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         dddinvoices.com reserves the right to change or update the conditions
         under which the use of the portal is offered. This may include changes
         to services, laws governing the provisions of services, or changes to
         services for any other reason.
       </p>
       <h3>Restrictions on personal and non - commercial use</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         The dddinvoices.com portal may only be used for personal, non-commercial
         use. No information, products or services that form part of the Website
         may be modified, copied, distributed, transmitted, performed,
@@ -38,7 +38,7 @@ const Terms: React.FC<{}> = () => {
         sold, unless expressly permitted by the owner or in the Terms of Use.
       </p>
       <h3>Illegal or prohibited use is not permitted</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         As a user of the dddinvoices.com website, you agree not to use the
         portal for purposes that are illegal or prohibited in the Terms of Use.
         You may not use the Portal in a manner that could damage, disable,
@@ -51,7 +51,7 @@ const Terms: React.FC<{}> = () => {
         report such an error to the administration of the website.
       </p>
       <h3>The right to use the feedback or suggestions you submit</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         dddinvoices.com encourages you to voluntarily submit feedback and
         suggestions regarding support for continuous service improvements to you
         and other users. When submitting feedback or suggestions, please note
@@ -71,7 +71,7 @@ const Terms: React.FC<{}> = () => {
         may provide.
       </p>
       <h3>Content available at dddinvoices.com</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         The content available for viewing and / or downloading from the websites
         that form part of the portal is owned by the company and is its
         copyrighted work. Reproduction and distribution of content is expressly
@@ -81,7 +81,7 @@ const Terms: React.FC<{}> = () => {
         reproduction or distribution is also expressly prohibited.
       </p>
       <h3>Limitation of Liability</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         This website is operated by DDD Invoices d.o.o., Letališka cesta 32j,
         1000 Ljubljana. DDD Invoices d.o.o. reserves all rights arising from
         this website. All information and other content and functions on this
@@ -103,7 +103,7 @@ const Terms: React.FC<{}> = () => {
         Related Rights Act and the Civil Procedure Act.
       </p>
       <h3>Privacy policies</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         We respect your privacy. We do not share your email address with any
         individual or company. Below are the facts of how we protect your
         privacy. Our server automatically recognizes the visitors&apos; domain
@@ -124,7 +124,7 @@ const Terms: React.FC<{}> = () => {
         are therefore not covered by our Privacy Policy Statement.
       </p>
       <h3>Cookies and web beacons</h3>
-      <p>
+      <p className="text-justify xl:text-start">
         A cookie is a short text that a website you visit sends to your browser.
         The site can use it to remember information about your visit, such as
         your chosen language and other settings. This can make your next visit

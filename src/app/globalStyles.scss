@@ -29,3 +29,9 @@ $main-gradient: linear-gradient(9deg, #005683 20.94%, #238abe 65.96%);
 .verticalMargin {
   margin-block: 5rem;
 }
+
+@media (max-width: 1279px) {
+  .verticalMargin {
+    margin-block: 2rem;
+  }
+}

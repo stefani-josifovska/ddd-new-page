@@ -14,7 +14,7 @@ import img3 from "./img3.png";
 import MiddleCta from "@/app/_components/reusables/MiddleCta";
 import ImgContainer from "@/app/_components/UI/ImgContainer";
 import { Metadata } from "next";
-import ButtonLink from "@/app/_components/UI/ButtonLink";
+import CodeExample from "@/app/_components/reusables/CodeExample";
 
 export const metadata: Metadata = {
   title: "DDD Invoices | Pricing",
@@ -25,18 +25,23 @@ const Pricing: React.FC<{}> = () => {
   return (
     <>
       <Hero content={heroContent} />
-      <section
+      {/* <section
         className={`${classes.container} ${classes.priceBoxesContainer}`}
       >
         <PriceBox content={domestic} />
         <PriceBox content={international} />
-      </section>
-      <section
-        className={`${classes.container} ${classes.pricingCtaContainer} flex`}
+      </section> */}
+      {/* <section
+        className={`${classes.container} ${classes.pricingCtaContainer} flex flex-col md:flex-row gap-10 md:gap-0 mt-20`}
       >
         <div className="flex-1 text-center flex flex-col items-center justify-center">
           <h3 className="mb-3">Talk to us?</h3>
-          <Button content="Book a meeting" variant="primary" color="orange" />
+          <Button
+            content="Book a meeting"
+            variant="primary"
+            color="orange"
+            className="px-10"
+          />
         </div>
         <div className="flex-1">
           <ul>
@@ -45,13 +50,13 @@ const Pricing: React.FC<{}> = () => {
             ))}
           </ul>
         </div>
-      </section>
+      </section> */}
       <TrustedBy />
       <QuestionsContainer page="pricing" />
-      <section className={`${classes.container} ${classes.introSection}`}>
+      {/* <section className={`${classes.container} ${classes.introSection}`}>
         <h3>A complete invoicing, e-invoicing & fiscalization solution</h3>
         <h2>What do I get for this price?</h2>
-      </section>
+      </section> */}
       <Grid>
         <div>
           <ImgContainer img={img1} />
@@ -63,7 +68,8 @@ const Pricing: React.FC<{}> = () => {
           <p>
             Give your customer the gift of a modern, frictionless, and painless
             solution, by providing them with software that has all the
-            intricacies of localized invoicing handled.
+            intricacies of localized invoicing, e-invoicing & fiscalization
+            handled.
           </p>
           <p>
             Integrate with DDD Invoices once and get invoicing compliance for
@@ -88,24 +94,7 @@ const Pricing: React.FC<{}> = () => {
           <ImgContainer img={img2} />
         </div>
       </Grid>
-      <Grid>
-        <div>kod</div>
-        <div>
-          <h2 className="mb-10">Test for free, before committing</h2>
-          <p>Test for free and switch to production when ready.</p>
-          <p>
-            Our integration is the same for all countries that you require
-            invoicing for. Developers love our thorough, well-documented APIs.
-          </p>
-          <p>See how easy it is:</p>
-          <ButtonLink
-            href="https://dddinvoices.com/documentation"
-            content="Read the docs"
-            variant="primary"
-            color="orange"
-          />
-        </div>
-      </Grid>
+      <CodeExample />
       <Grid>
         <div>
           <h2 className="mb-10">

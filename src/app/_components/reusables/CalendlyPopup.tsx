@@ -23,7 +23,7 @@ const CalendlyPopup: React.FC<{
         variant={variant || "primary"}
         color="white"
         textColor={color || "orange"}
-        className={`w-6 ${className}`}
+        className={`${className}`}
         onClick={onOpenHandler}
       />
       {isOpen && (

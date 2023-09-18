@@ -8,6 +8,12 @@
 
   & > div {
     flex: 1;
+    margin-block: auto;
+
+    & > span {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
   }
 
   & h2 {

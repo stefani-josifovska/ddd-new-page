@@ -17,6 +17,18 @@ export type heroContentObj = {
     variant: string;
     color: string;
     isCalendly?: boolean;
+    className?: string;
   }[];
   img?: { src: string; alt: string };
 };
+
+type hintContentEl = string | { url: string; text: string };
+
+export type hintObject = {
+  positionX: string;
+  positionY: string;
+  content: hintContentEl[];
+  title?: string;
+};
+
+export type hintsType = hintObject[];

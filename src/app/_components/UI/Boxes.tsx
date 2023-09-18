@@ -10,9 +10,9 @@ const Boxes: React.FC<{
 }> = ({ subtitle, title, content }) => {
   return (
     <section className={classes.container}>
-      <h3>{subtitle}</h3>
+      <span>{subtitle}</span>
       <h2>{title}</h2>
-      <div className="grid xl:grid-cols-4 xl:gap-4 place-content-center">
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4 place-content-center">
         {content.map((item) => (
           <Box key={item.title} item={item} />
         ))}

@@ -5,6 +5,9 @@ import Grid from "@/app/_components/UI/Grid";
 import Button from "@/app/_components/UI/Button";
 import Prefooter from "@/app/_components/prefooter/Prefooter";
 import { Metadata } from "next";
+import QuestionsContainer from "@/app/_components/questions/QuestionsContainer";
+import worldImg from "../../../_assets/world.webp";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Global e-invoicing platform for enterprises",
@@ -33,14 +36,18 @@ const Enterprises: React.FC<{}> = () => {
             problem you are facing and we will try to find a solution.
           </p>
           <Button
-            content="Take with an expert"
+            content="Talk with an expert"
             variant="primary"
             color="orange"
+            className="px-5"
           />
         </div>
-        <div>slika</div>
+        <div>
+          {" "}
+          <Image src={worldImg} alt="" className="m-auto" />
+        </div>
       </Grid>
-      <p>komponenta</p>
+      <QuestionsContainer page="enterprise" />
       <Prefooter title="More about the DDD Invoices platform" />
     </>
   );

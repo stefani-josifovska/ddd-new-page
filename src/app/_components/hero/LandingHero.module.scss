@@ -3,9 +3,14 @@
 .container {
   background: $main-gradient;
   margin-top: -$navbar-height;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   max-height: 750px;
   overflow-y: hidden;
+
+  // & h1 {
+  //   font-weight: 500;
+  // }
 }
 
 .container > div {

@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "./Questions.module.scss";
 
-const CommonQuestions: React.FC<{}> = () => {
+const StickyTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className="flex-1">
       <div className={`w-fit ${classes.stickyTitle}`}>
-        <p>Common questions:</p>
+        <p>{children}</p>
       </div>
     </div>
   );
 };
 
-export default CommonQuestions;
+export default StickyTitle;

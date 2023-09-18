@@ -3,8 +3,9 @@
 .container {
   @extend .width;
 
-  & h3 {
+  & > span {
     font-size: 1.2rem;
+    font-weight: 500;
   }
 
   & h2 {
@@ -34,16 +35,23 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  color: white;
 
   & span {
     color: rgba(232, 73, 14, 1);
   }
 
-  & p {
+  & p:last-of-type {
     font-size: 1.3rem;
   }
 
-  & h4 {
+  & p:first-of-type {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 70%;
   }
 }

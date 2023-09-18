@@ -152,7 +152,10 @@ const Privacy: React.FC<{}> = () => {
           Cookies. For more information on how You can delete Flash Cookies,
           please read &quot;Where can I change the settings for disabling, or
           deleting local shared objects?&quot; available at{" "}
-          <a href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_">
+          <a
+            href="https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_"
+            className="break-words"
+          >
             https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
           </a>
         </li>
@@ -432,7 +435,10 @@ const Privacy: React.FC<{}> = () => {
         If you have any questions about this Privacy Policy, You can contact us:
       </p>
       <ul>
-        <li>By email: info@e-invoices.online</li>
+        <li>
+          By email:{" "}
+          <span className="whitespace-nowrap">info@e-invoices.online</span>
+        </li>
         <li>
           By visiting this page on our website:{" "}
           <a href="https://dddinvoices.com/privacy-policy">

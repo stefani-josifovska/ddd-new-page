@@ -10,8 +10,7 @@ import img2 from "./img2.png";
 import img3 from "./img3.png";
 import ImgContainer from "@/app/_components/UI/ImgContainer";
 import { Metadata } from "next";
-import ButtonLink from "@/app/_components/UI/ButtonLink";
-import TypingEffect from "@/app/_components/reusables/TypingEffect";
+import CodeExample from "@/app/_components/reusables/CodeExample";
 
 export const metadata: Metadata = {
   title:
@@ -30,8 +29,9 @@ const PaymentProv: React.FC<{}> = () => {
           <p>Empower your clients with a one-stop solution.</p>
           <p>
             From processing payments to generating locally compliant invoices &
-            e-invoices to automated billing & self-billing, you can offer a
-            seamless experience that adds value and efficiency.
+            <span className="whitespace-nowrap">e-invoices</span> to automated
+            billing & self-billing, you can offer a seamless experience that
+            adds value and efficiency.
           </p>
           <p>
             Our API automates the entire invoicing process, from creation to
@@ -77,26 +77,7 @@ const PaymentProv: React.FC<{}> = () => {
           <ImgContainer img={img3} />
         </div>
       </Grid>
-      <Grid>
-        <div>
-          <TypingEffect />
-        </div>
-        <div>
-          <h2>Test for free, before committing</h2>
-          <p>Test for free and switch to production when ready.</p>
-          <p>
-            Our integration is the same for all countries you require the
-            invoicing for.
-          </p>
-          <p>See how easy it is:</p>
-          <ButtonLink
-            href="https://dddinvoices.com/documentation"
-            content="Read the docs"
-            variant="primary"
-            color="orange"
-          />
-        </div>
-      </Grid>
+      <CodeExample />
       <CustomerCta />
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Questions.module.scss";
 import { questions } from "./content";
+import Hint from "../UI/Hint";
 
 const DisplayImage: React.FC<{ chosenQuestion: number }> = ({
   chosenQuestion,
@@ -11,17 +12,10 @@ const DisplayImage: React.FC<{ chosenQuestion: number }> = ({
         style={{
           backgroundImage: `url(${questions[chosenQuestion].image.src})`,
         }}
+        className="h-96 w-96"
       >
         {questions[chosenQuestion].hints.map((hint, index) => (
-          <div
-            key={`hint-${index}`}
-            className="absolute"
-            style={{ top: hint.positionY, left: hint.positionX }}
-          >
-            {hint.content.map((item, itemIndex) => (
-              <p key={`hint-${index}-${itemIndex}`}>+</p>
-            ))}
-          </div>
+          <Hint key={`hint-${index}`} hint={hint} />
         ))}
       </div>
     </div>

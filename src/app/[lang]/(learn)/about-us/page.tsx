@@ -3,9 +3,8 @@ import classes from "./Company.module.scss";
 import { contacts } from "./contacts";
 import ContactBox from "./ContactBox";
 import Image from "next/image";
-import TailoredSaas from "./tailoredSaas.svg";
+import TailoredSaas from "./tailoredSaas.png";
 import einvOnline from "./einvOnline.svg";
-import Button from "@/app/_components/UI/Button";
 import microsoft from "./supported1.png";
 import partner1 from "./partner1.svg";
 import partner2 from "./partner2.svg";
@@ -26,33 +25,33 @@ const Company: React.FC<{}> = () => {
       <div className={classes.banner}></div>
       <div className="py-10">
         <h1>About DDD invoices</h1>
-        <p className="w-9/12 my-4">
+        <p className="lg:w-9/12 my-4">
           Your global e-invoicing partner for effortless compliance.
         </p>
-        <p className="w-9/12">
+        <p className="lg:w-9/12">
           With DDD invoices we want to facilitate the transition to electronic
           invoicing and automate global & local invoice exchange so you can
           focus on the core of your business.
         </p>
-        <h2 className="my-10">Our Vision</h2>
-        <p className="w-9/12 my-4">
+        <h2 className="my-10">Our Mission</h2>
+        <p className="lg:w-9/12 my-4">
           Founded on the principles of innovation and excellence, DDD Invoices
           is driven by a mission to empower businesses to focus on their
           strengths while we handle the intricacies of invoicing.
         </p>
-        <p className="w-9/12 my-4">
+        <p className="lg:w-9/12 my-4">
           More than 35 years of Invoicing & ERP industry expertise, led to
           creation of the DDD Invoices platform, with one goal in mind:
         </p>
         <p>
           <i>“Make invoicing easy.”</i>
         </p>
-        <p className="w-9/12 my-4">
+        <p className="lg:w-9/12 my-4">
           With the increasing global shift towards e-invoicing, more and more
           companies find it difficult to develop all of the compliance features
           by themselves.
         </p>
-        <p className="w-9/12 my-4">
+        <p className="lg:w-9/12 my-4">
           At DDD Invoices, we take pride in being your global e-invoicing
           partner, offering unparalleled expertise with over three decades in
           the invoicing industry. Our company is dedicated to revolutionizing
@@ -62,9 +61,9 @@ const Company: React.FC<{}> = () => {
           resulting in a comprehensive suite of solutions.
         </p>
         <div className="my-8">
-          <h3>Meet the team</h3>
+          {/* <h3>Meet the team</h3> */}
           <h2>Our leadership team</h2>
-          <div className="flex flex-wrap gap-8 justify-center">
+          <div className="flex flex-wrap gap-8 justify-center xl:justify-between">
             {contacts.map((contact) => (
               <ContactBox
                 key={contact.name}
@@ -75,10 +74,10 @@ const Company: React.FC<{}> = () => {
             ))}
           </div>
         </div>
-        <div className="my-10 flex">
+        <div className="my-10 flex flex-col md:flex-row gap-5">
           <div className="flex-1">
             <h2>Empowering Developers, Enhancing User Experience</h2>
-            <p className="w-9/12">
+            <p className="lg:w-9/12">
               Our dedication goes beyond serving businesses with invoicing
               solutions; it extends to the software developers who drive digital
               transformation. Through our innovative approach, we have developed
@@ -89,13 +88,13 @@ const Company: React.FC<{}> = () => {
             <h3>See more at:</h3>
             <a className={classes.seeMoreLink} href="https://tailoredsaas.com/">
               <span>TailoredSaas</span>
-              <Image src={TailoredSaas} alt="Tailored SaaS" />
+              <Image src={TailoredSaas} alt="Tailored SaaS" width="100" />
             </a>
             <a
               className={classes.seeMoreLink}
               href="https://e-invoices.online/"
             >
-              <span>e-Invoices.online</span>
+              <span className="whitespace-nowrap">e-Invoices.online</span>
               <Image src={einvOnline} alt="e-Invoices Online" />
             </a>
           </div>
@@ -111,7 +110,7 @@ const Company: React.FC<{}> = () => {
             color="orange"
             className="w-72"
           /> */}
-          <CalendlyPopup className="w-72" />
+          <CalendlyPopup className="w-72" color="white" />
         </div>
         <div>
           <h2>Supported by</h2>

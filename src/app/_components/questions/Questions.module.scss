@@ -1,7 +1,12 @@
 @import "../../globalStyles.scss";
 
-.container {
+.container,
+.subtitle {
   @extend .width;
+}
+
+.subtitle {
+  font-size: 2rem;
 }
 
 .questDiv {
@@ -10,10 +15,8 @@
   }
 
   & h3 {
-    font-weight: 400;
     font-size: 1.4rem;
     margin-right: 30px;
-    // color: $main-orange;
   }
 
   & h4 {
@@ -24,7 +27,6 @@
 
   & p {
     color: $main-blue;
-    margin-top: 10px;
   }
 }
 
@@ -39,16 +41,31 @@
   }
 }
 
+.questSubtitle {
+  color: $main-orange !important;
+  font-weight: 500;
+  margin-right: 30px;
+}
+
 .answer {
+  margin: 0;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 .dispAnswer {
+  margin-top: 10px;
   opacity: 1;
-  max-height: 1000px; /* Adjust this value based on your content */
+  max-height: 200px; /* Adjust this value based on your content */
+  // max-height: fit-content;
+}
+
+.hideAnswer {
+  max-height: 0;
+  opacity: 0;
+  transition: none;
 }
 
 .arrow {
@@ -61,11 +78,10 @@
   justify-content: center;
 
   & > div {
-    aspect-ratio: 1 / 1;
-    height: 100%;
-    border-radius: $card-radius;
-    box-shadow: $card-shadow;
     position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -73,7 +89,8 @@
   position: sticky;
   top: 50vh;
   margin: auto;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 @media (max-width: 1279px) {

@@ -13,10 +13,6 @@
     align-items: center;
   }
 
-  & img {
-    margin-right: $navbar-gap;
-  }
-
   & > div > div button:first-of-type {
     margin-right: $navbar-gap;
   }
@@ -26,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     margin-right: auto;
+    margin-left: 20px;
     gap: $navbar-gap;
 
     & li {
@@ -46,43 +43,33 @@
   display: none;
 }
 
-.navDropdownContainer {
-  position: relative;
+.logoImg {
+  margin-top: -4px;
+}
 
-  & > div {
-    position: absolute;
-    background-color: white;
-    padding: 1rem;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
+.navbarItem > a,
+.navbarItem > button {
+  display: inline-block;
+  line-height: 3rem;
+  font-weight: 300;
+}
 
-    & ul {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-around;
-    }
-
-    & li {
-      color: black;
-    }
-
-    &:hover .toggleDisp,
-    & button:focus + .toggleDisp,
-    & a:focus + .toggleDisp {
-      display: block;
-    }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-.toggleDisp {
-  display: none;
-}
-
-.navDropdownContainer:hover .toggleDisp,
-.navDropdownContainer button:focus + .toggleDisp,
-.navDropdownContainer a:focus + .toggleDisp {
-  display: block;
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .navbar {
@@ -97,6 +84,53 @@
 
 .navbar--scrolled {
   background: $main-blue;
+}
+
+@media (min-width: 1279px) {
+  .navDropdownContainer {
+    position: relative;
+
+    & > div {
+      position: absolute;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: $border-radius;
+      box-shadow: $box-shadow;
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+      }
+
+      & li {
+        color: black;
+      }
+
+      &:hover .toggleDisp,
+      & button:focus + .toggleDisp,
+      & a:focus + .toggleDisp {
+        display: block;
+      }
+    }
+  }
+
+  .navDropdownContainer:hover .toggleDisp,
+  .navDropdownContainer button:focus + .toggleDisp,
+  .navDropdownContainer a:focus + .toggleDisp {
+    display: block;
+  }
+
+  .toggleDisp {
+    display: none;
+    left: -250%;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: fade-in 0.5s ease-in-out forwards,
+      slide-down 0.3s ease-in-out forwards;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -117,6 +151,8 @@
     height: $navbar-height;
 
     & > div {
+      animation: fade-in 0.5s ease-in-out forwards,
+        slide-down 0.3s ease-in-out forwards;
       position: fixed;
       top: 0;
       left: 0;
@@ -144,5 +180,11 @@
     position: absolute;
     top: 3rem;
     right: 3rem;
+  }
+
+  .backBtn {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
   }
 }

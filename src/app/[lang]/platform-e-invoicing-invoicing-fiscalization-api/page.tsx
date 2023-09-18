@@ -9,6 +9,12 @@ import classes from "./Platform.module.scss";
 import { Metadata } from "next";
 import Support from "./Support";
 import ButtonLink from "@/app/_components/UI/ButtonLink";
+import schema from "./schema.png";
+import Image from "next/image";
+import { hints } from "./content";
+import Hint from "@/app/_components/UI/Hint";
+import Platform1 from "../../_assets/platform1.webp";
+import Platform2 from "../../_assets/world.webp";
 
 export const metadata: Metadata = {
   title:
@@ -22,9 +28,11 @@ const Platform: React.FC<{}> = () => {
     <>
       <Hero content={platformHero} />
       <Grid>
-        <div>slika</div>
         <div>
-          <h3>Get up and running in minutes</h3>
+          <Image src={Platform1} alt="" className="m-auto" />
+        </div>
+        <div>
+          <span>Get up and running in minutes</span>
           <h2>How to get started?</h2>
           <p>
             Connecting your software to our platform via e-invoicing API is a
@@ -44,39 +52,47 @@ const Platform: React.FC<{}> = () => {
               content="Start for free"
               variant="primary"
               color="orange"
-              className="xl:mr-4"
+              className="xl:mr-4 px-10"
             />
             <ButtonLink
               href="https://dddinvoices.com/documentation"
               content="Read the docs"
               variant="secondary"
               color="orange"
+              className="px-10 sm:ml-4"
             />
           </div>
         </div>
       </Grid>
       <Grid>
         <div>
-          <h3>How does it work?</h3>
+          <span>How does it work?</span>
           <h2>
             Enable <b>e-invoicing globally</b> in minutes
           </h2>
           <p>
             Connect to our platform with the invoicing API to send us invoice
             data in a simple .JSON format and we&apos;ll create a compliant
-            invoice & e-invoice and deliver it globally.
+            invoice & e-invoice, deliver it globally and report it to the tax
+            authorities.
           </p>
           <p>
             Receive invoices from various sources (tax authority, PEPPOL, OCR
-            from mail etc.) to our platform and receive them directly into your
-            software.
+            from mail, supplier&apos;s ERP etc.) to our platform and receive
+            them directly into your software in the format you require.
           </p>
           <p>
-            Store them in our secure cloud. All invoices can also be stored on
-            our cloud for a legally required period.
+            Store documents in our secure cloud for a legally required period.
           </p>
         </div>
-        <div>slika</div>
+        <div>
+          <div className="relative m-auto w-fit">
+            <Image src={schema} alt="schema" />
+            {hints.map((hint, index) => (
+              <Hint key={`hint-${index}`} hint={hint} />
+            ))}
+          </div>
+        </div>
       </Grid>
       <MiddleCta />
       <QuestionsContainer page="platform" />
@@ -107,11 +123,14 @@ const Platform: React.FC<{}> = () => {
           <ButtonLink
             href="https://dddinvoices.com/learn/"
             content="See regulatory development in Countries >"
-            variant="primary"
+            variant="secondary"
             color="orange"
+            className="px-10"
           />
         </div>
-        <div>slika</div>
+        <div>
+          <Image src={Platform2} alt="" className="m-auto" />
+        </div>
       </Grid>
       <Prefooter title="More about the DDD Invoices platform" />
     </>

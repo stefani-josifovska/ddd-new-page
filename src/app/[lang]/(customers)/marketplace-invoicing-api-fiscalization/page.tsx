@@ -9,8 +9,9 @@ import img1 from "./img1.png";
 import img2 from "./img2.png";
 import ImgContainer from "@/app/_components/UI/ImgContainer";
 import { Metadata } from "next";
-import ButtonLink from "@/app/_components/UI/ButtonLink";
-import TypingEffect from "@/app/_components/reusables/TypingEffect";
+import CodeExample from "@/app/_components/reusables/CodeExample";
+import worldImg from "../../../_assets/world.webp";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Tax compliant invoicing & eProcurement for marketplaces with 1 API",
@@ -35,7 +36,9 @@ const Marketplace: React.FC<{}> = () => {
             invoicing, e-invoicing, fiscalization and other capabilities.
           </p>
         </div>
-        <div>slika</div>
+        <div>
+          <Image src={worldImg} alt="" className="m-auto" />
+        </div>
       </Grid>
       <Benefits
         title="Invoice on behalf of your clients while adhering to local requirements"
@@ -50,8 +53,9 @@ const Marketplace: React.FC<{}> = () => {
           <h2>Created to support you & your tenants internationally</h2>
           <p>
             Local language and currencies - a customized experience with ease of
-            understanding. Generate e-invoices & automatically report them to
-            tax authorities with every sale.
+            understanding. Generate{" "}
+            <span className="whitespace-nowrap">e-invoices</span> &
+            automatically report them to tax authorities with every sale.
           </p>
           <p>
             Supporting you and your tenants on a road to expansion as the
@@ -78,26 +82,7 @@ const Marketplace: React.FC<{}> = () => {
           <ImgContainer img={img2} />
         </div>
       </Grid>
-      <Grid>
-        <div>
-          <TypingEffect />
-        </div>
-        <div>
-          <h2>Test for free, before committing</h2>
-          <p>Test for free and switch to production when ready.</p>
-          <p>
-            Our integration is the same for all countries you require the
-            invoicing for.
-          </p>
-          <p>See how easy it is:</p>
-          <ButtonLink
-            href="https://dddinvoices.com/documentation"
-            content="Read the docs"
-            variant="primary"
-            color="orange"
-          />
-        </div>
-      </Grid>
+      <CodeExample />
       <CustomerCta />
     </>
   );

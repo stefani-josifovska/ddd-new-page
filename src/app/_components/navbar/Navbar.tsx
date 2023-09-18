@@ -8,48 +8,54 @@ import Background from "./Background";
 import MobileNavbar from "./MobileNavbar";
 import ButtonLink from "../UI/ButtonLink";
 import CalendlyPopup from "../reusables/CalendlyPopup";
+import CustomersDropdown from "./CustomersDropdown";
+import LearnDropdown from "./LearnDropdown";
 
 const Navbar: React.FC<{}> = () => {
   return (
-    <nav className={classes.container}>
+    <nav
+      className={classes.container}
+      itemType="http://schema.org/SiteNavigationElement"
+    >
       <Background />
       <div className={classes.desktopNav}>
         <Link href="/">
-          <Image src={Logo} alt="DDD Invoices" width={200} height={20} />
+          <Image
+            src={Logo}
+            alt="DDD Invoices"
+            width={200}
+            height={20}
+            className={`mr-4 ${classes.logoImg}`}
+          />
         </Link>
         <ul>
           {items.map((item, index) => {
-            if (item.children.length > 0) {
+            if (item.children) {
               return (
                 <li
                   key={`navbar-item-${index}`}
-                  className={classes.navDropdownContainer}
+                  className={`${classes.navDropdownContainer} ${classes.navbarItem}`}
                 >
                   <button id={`dropdown-button-${index}`}>{item.item}</button>
                   <div
                     className={classes.toggleDisp}
                     aria-labelledby={`dropdown-button-${index}`}
                   >
-                    <ul>
-                      {item.children.map((menuItem, itemIndex) => (
-                        <li key={`link-${index}-${itemIndex}`}>
-                          <Link href={menuItem.url}>{menuItem.item}</Link>
-                        </li>
-                      ))}
-                    </ul>
+                    {item.item === "Customers" && <CustomersDropdown />}
+                    {item.item === "Learn" && <LearnDropdown />}
                   </div>
                 </li>
               );
             }
             return (
-              <li key={`navbar-item-${index}`}>
+              <li key={`navbar-item-${index}`} className={classes.navbarItem}>
                 <Link href={item.url}>{item.item}</Link>
               </li>
             );
           })}
         </ul>
         <div>
-          <CalendlyPopup />
+          <CalendlyPopup color="white" />
           <ButtonLink
             href="https://dddinvoices.com/login"
             content="Login"

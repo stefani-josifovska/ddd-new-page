@@ -1,16 +1,28 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Navbar.module.scss";
 
 const Background: React.FC<{}> = () => {
   const [isColored, setIsColored] = useState(false);
 
-  const changeColor = () => {
-    if (window.scrollY >= 90) setIsColored(true);
-    else setIsColored(false);
-  };
+  useEffect(() => {
+    const changeColor = () => {
+      if (typeof window !== "undefined" && window.scrollY >= 90) {
+        setIsColored(true);
+      } else {
+        setIsColored(false);
+      }
+    };
 
-  window.addEventListener("scroll", changeColor);
+    window.addEventListener("DOMContentLoaded", changeColor);
+    window.addEventListener("scroll", changeColor);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("DOMContentLoaded", changeColor);
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []); // Empty dependency array to ensure it runs only once
 
   return (
     <div
