@@ -1,12 +1,12 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Inter } from "@next/font/google";
+// import { Inter } from "@next/font/google";
 import Navbar from "./_components/navbar/Navbar";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 import Footer from "./_components/footer/Footer";
 import CookieConsent from "./_components/reusables/CookieConsent";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 const poppins = localFont({
   src: [
